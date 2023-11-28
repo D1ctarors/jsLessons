@@ -15,12 +15,11 @@
 // 3) Проверить, чтобы все работало и не было ошибок в консоли
 
 let navList = document.querySelector(".menu"),
-  navItems = document.querySelectorAll(".menu-item"),
+  navItems = Array.from(document.querySelectorAll(".menu-item")),
   navItem = document.createElement("li"),
   title = document.querySelector("#title"),
   advs = document.querySelectorAll(".adv"),
-  promptBlock = document.querySelector("#prompt"),
-  que = prompt("Как вы относитесь к технике Apple?", "");
+  promptBlock = document.querySelector("#prompt");
 
 //   Добавить пятый пункт
 navList.appendChild(navItem);
@@ -29,6 +28,12 @@ navItem.textContent = "Пятый пункт";
 
 //   Сортировка пунктов
 navList.insertBefore(navItems[1], navItems[3]);
+
+// navItems.sort(function (a, b) {
+//   return a - b;
+// });
+
+// console.log(navItems);
 
 //   Заменить картинку заднего фона
 document.body.style.backgroundImage = "url(/Lesson_5/img/apple_true.jpg)";
@@ -42,4 +47,4 @@ advs.forEach(function (item) {
 });
 
 //	Отношение к технике apple
-promptBlock.textContent = `${que}`;
+promptBlock.textContent = prompt("Как вы относитесь к технике Apple?", "");

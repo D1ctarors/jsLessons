@@ -1,37 +1,33 @@
 "use strict";
 
-let box = document.getElementById("box"),
-  btnList = document.getElementsByTagName("button"),
-  circleList = document.getElementsByClassName("circle"),
-  wrapperHearts = document.querySelector(".wrapper"),
-  heartList = document.querySelectorAll(".heart");
+let btnList = document.querySelectorAll("button"),
+  wrap = document.querySelector(".wrapper"),
+  link = document.querySelector("a");
+// btnList[0].onclick = function () {
+//   alert("Привет мир!");
+// };
 
-// console.log(box);
-// console.log(btnList[0]);
-// console.log(circleList);
-// console.log(heartList);
-
-box.style.backgroundColor = "green";
-// box.style.display = "none";
-
-// btnList[1].style.borderRadius = "0%";
-
-for (let i = 0; i < heartList.length; i++) {
-  heartList[i].style.backgroundColor = "green";
-}
-
-// heartList.forEach(function (item, i, hearts) {
-//   item.style.backgroundColor = "green";
+// btnList[0].addEventListener("mouseenter", function () {
+//   alert("Привет мир!");
+//   //   alert("Привет мир2!");
 // });
 
-let div = document.createElement("div"),
-  text = document.createTextNode("jgk");
+// btnList[0].addEventListener("click", function (event) {
+//   console.log("Событие:: " + event.type + " на элементе " + event.target);
+// });
 
-div.classList.add("black");
+// wrap.addEventListener("click", function (event) {
+//   console.log("Событие:: " + event.type + " на элементе " + event.target);
+// });
 
-// div.innerHTML = `<h1>Hello world</h1>`;
-div.textContent = "Hello";
+// link.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   console.log("Событие:: " + e.type + " на элементе " + e.target);
+// });
 
-wrapperHearts.appendChild(div);
-
-// document.body.appendChild(div);
+// btnList.forEach(function (btn) {
+//   btn.addEventListener("click", function (e) {
+//     // e.preventDefault();
+//     console.log("Событие:: " + e.type + " на элементе " + e.target);
+//   });
+// });
