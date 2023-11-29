@@ -15,7 +15,6 @@
 // 3) Проверить, чтобы все работало и не было ошибок в консоли
 
 let navList = document.querySelector(".menu"),
-  navItems = Array.from(document.querySelectorAll(".menu-item")),
   navItem = document.createElement("li"),
   title = document.querySelector("#title"),
   advs = document.querySelectorAll(".adv"),
@@ -26,13 +25,17 @@ navList.appendChild(navItem);
 navItem.classList.add("menu-item");
 navItem.textContent = "Пятый пункт";
 
+let navItems = Array.from(document.querySelectorAll(".menu-item"));
+
+console.log(navItems);
+
 //   Сортировка пунктов
 navList.insertBefore(navItems[1], navItems[3]);
 
 // navItems.sort(function (a, b) {
 //   return a - b;
 // });
-
+// console.log(navItems);
 // console.log(navItems);
 
 //   Заменить картинку заднего фона
