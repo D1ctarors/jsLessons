@@ -1,3 +1,9 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 15px;
+}
+
 .box {
 	width: 150px;
 	height: 150px;
@@ -13,4 +19,13 @@ button {
 	color: #fff;
 	cursor: pointer;
 	outline: none;
+}
+.box {
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 400px;
+	height: 350px;
+	overflow-y: scroll;
+	background: #ece0e0;
+	padding: 10px;
 }
