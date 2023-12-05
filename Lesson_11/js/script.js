@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
   // Обратный отчёт
-  let deadLine = "2023-12-03";
+  let deadLine = "2023-12-09";
 
   function getTimeRemaining(deadLine) {
     let t = Date.parse(deadLine) - Date.parse(new Date()),
@@ -72,4 +72,21 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   setTimer("timer", deadLine);
+
+  //   Модальное окно
+  let more = document.querySelector(".more"),
+    overlay = document.querySelector(".overlay"),
+    close = document.querySelector(".popup-close");
+
+  more.addEventListener("click", function () {
+    overlay.style.display = "block";
+    this.classList.add("more-splash");
+    document.body.style.overflow = "hidden";
+  });
+
+  close.addEventListener("click", function () {
+    overlay.style.display = "none";
+    more.classList.remove("more-splash");
+    document.body.style.overflow = "";
+  });
 });
