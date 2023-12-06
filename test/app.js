@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 //! События
 // let btnList = document.querySelectorAll("button"),
 //   wrap = document.querySelector(".wrapper"),
@@ -81,6 +81,20 @@
 // console.log(Ivan.exit());
 // console.log(Alex);
 
+// class Rectangle {
+//   constructor(height, width) {
+//     this.height = height;
+//     this.width = width;
+//   }
+
+//   calcArea() {
+//     return this.height * this.width;
+//   }
+// }
+
+// const square = new Rectangle(10, 10);
+// console.log(square.calcArea());
+
 //! This
 //? 1) Просто вызов функции
 // function showThis(a, b) {
@@ -137,3 +151,70 @@
 //   }
 //   showThis();
 // });
+
+//! Переменные
+// function makeArr() {
+//   var items = [];
+//   for (var i = 0; i < 10; i++) {
+//     var item = function () {
+//       console.log(i);
+//     };
+//     items.push(item);
+//   }
+//   return items;
+// }
+
+// var arr = makeArr();
+// arr[1]();
+// arr[3]();
+// arr[7]();
+
+//! Стрелочные функции
+
+// let fun = () => {
+//   console.log(this);
+// };
+
+// fun();
+
+// let obj = {
+//   num: 4,
+//   sayNum: function () {
+//     let say = () => {
+//       console.log(this);
+//     };
+//     say();
+//   },
+// };
+// obj.sayNum();
+
+// let btn = document.querySelector("button");
+// btn.addEventListener("click", function () {
+//   let show = () => {
+//     console.log(this);
+//   };
+//   show();
+// });
+
+// function calcOrDouble(number, basis = 2) {
+//   //   basis = basis || 2; ES5
+//   console.log(number * basis);
+// }
+// calcOrDouble(3, 5);
+// calcOrDouble(6);
+
+//! Spread оператор
+let video = ["youtube", "vimeo", "rutube"],
+  blogs = ["wordpress", "livejournal", "bloger"],
+  internet = [...video, ...blogs, "vk", "facebook"];
+
+// console.log(internet);
+
+function log(a, b, c) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+
+let num = [2, 5, 7];
+log(...num);
