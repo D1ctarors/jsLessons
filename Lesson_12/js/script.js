@@ -1,4 +1,22 @@
-window.addEventListener("DOMContentLoaded", function () {
+// 1) Привести свой проект в соответствие с ES6 (в проекте Yoga, то, что можно преобразовать)
+
+// 2) Используя синтаксис ES6 в отдельном документе:
+
+// · Создать класс options
+
+// · Он должен содержать свойства: height, width, bg, fontSize, textAlign
+
+// · Он должен содержать метод, создающий новый div на странице, записывающий в него любой текст и при помощи cssText изменять свой стиль из переданных параметров
+
+// · Создать новый объект через класс
+
+// · Вызвать его метод и получить элемент на странице
+
+// 3) Проверить, чтобы все работало и не было ошибок в консоли
+
+// 4) Добавить папку с уроком на GitHub
+
+window.addEventListener("DOMContentLoaded", () => {
   "use strict";
   //Работа табов
   let tab = document.querySelectorAll(".info-header-tab"),
@@ -67,7 +85,6 @@ window.addEventListener("DOMContentLoaded", function () {
       if (t.total <= 0) {
         clearInterval(timeInterval);
       }
-      // console.log(t);
     }
   }
 
@@ -78,13 +95,13 @@ window.addEventListener("DOMContentLoaded", function () {
     overlay = document.querySelector(".overlay"),
     close = document.querySelector(".popup-close");
 
-  more.addEventListener("click", function () {
+  more.addEventListener("click", () => {
     overlay.style.display = "block";
-    this.classList.add("more-splash");
+    overlay.classList.add("more-splash");
     document.body.style.overflow = "hidden";
   });
 
-  close.addEventListener("click", function () {
+  close.addEventListener("click", () => {
     overlay.style.display = "none";
     more.classList.remove("more-splash");
     document.body.style.overflow = "";
