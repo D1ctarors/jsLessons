@@ -204,17 +204,29 @@
 // calcOrDouble(6);
 
 //! Spread оператор
-let video = ["youtube", "vimeo", "rutube"],
-  blogs = ["wordpress", "livejournal", "bloger"],
-  internet = [...video, ...blogs, "vk", "facebook"];
+// let video = ["youtube", "vimeo", "rutube"],
+//   blogs = ["wordpress", "livejournal", "bloger"],
+//   internet = [...video, ...blogs, "vk", "facebook"];
 
-// console.log(internet);
+// // console.log(internet);
 
-function log(a, b, c) {
-  console.log(a);
-  console.log(b);
-  console.log(c);
-}
+// function log(a, b, c) {
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
 
-let num = [2, 5, 7];
-log(...num);
+// let num = [2, 5, 7];
+// log(...num);
+
+//! JSON
+// let options = {
+//   with: 1280,
+//   hight: 798,
+//   background: "red",
+//   font: {
+//     size: "16px",
+//     color: "#fff",
+//   },
+// };
+// console.log(JSON.parse(JSON.stringify(options)));
