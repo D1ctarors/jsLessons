@@ -230,3 +230,82 @@
 //   },
 // };
 // console.log(JSON.parse(JSON.stringify(options)));
+
+//! Promise
+
+//? Пример через callback
+let btn = document.querySelector("button"),
+  drink = 1;
+// // btn.addEventListener("click", function () {
+// //   alert("Что-то произошло!");
+// // });
+
+// function shoot(arrow, headshot, fail) {
+//   console.log("Вы сделали выстрел...");
+
+//   setTimeout(function () {
+//     Math.random() > 0.5 ? headshot({}) : fail("Промах :(");
+//   }, 3000);
+// }
+
+// function win() {
+//   console.log("Победа!!!");
+//   drink == 1 ? buyBeer() : giveMoney();
+// }
+
+// function buyBeer() {
+//   console.log("Вам купили пиво");
+// }
+
+// function giveMoney() {
+//   console.log("Вам заплатили");
+// }
+
+// function loose() {
+//   console.log("Вы проиграли");
+// }
+
+// shoot(
+//   {},
+//   function (mark) {
+//     console.log("Вы попали в цель!");
+//     win(mark, buyBeer, giveMoney);
+//   },
+//   function (miss) {
+//     console.log("Промах :(");
+//     loose();
+//   }
+// );
+
+//? Пример через Промисы
+function shoot(arrow) {
+  console.log("Вы сделали выстрел...");
+  let promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      Math.random() > 0.5 ? resolve({}) : reject("Промах :(");
+    }, 1000);
+  });
+  return promise;
+}
+
+function win() {
+  console.log("Победа!!!");
+  drink == 1 ? buyBeer() : giveMoney();
+}
+
+function buyBeer() {
+  console.log("Вам купили пиво");
+}
+
+function giveMoney() {
+  console.log("Вам заплатили");
+}
+
+function loose() {
+  console.log("Вы проиграли");
+}
+
+shoot({})
+  .then((mark) => console.log("Вы попали в цель!"))
+  .then(win)
+  .catch(loose);
